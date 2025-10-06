@@ -4,13 +4,14 @@ phases:
   install:
     runtime-versions:
       nodejs: 20
-
-  pre_build:
     commands:
-      - npm install
+      - npm i
+      - npm i -g typescript
+      - npm i -g @nestjs/cli
 
   build:
     commands:
+      - npm install
       - npm run build
     
   post_build:
